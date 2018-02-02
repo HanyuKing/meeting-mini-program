@@ -1,0 +1,81 @@
+<!--pages/meeting_detail/detail.wxml-->
+<view class='font-size body'>
+
+    <view>
+      <button bindtap='preSPCode'>
+        查看小程序码
+      </button>
+    </view>
+
+    <view>
+      <text bindtap='showDetail'>查看会议详情</text>
+    </view>
+    <view class='apply-punch' hidden='{{!isShowDetail}}'>
+      <view>
+        <text>发起人：{{meetingInfo.admin}}</text>
+      </view>
+      <view>
+        <text>状态：{{meetingInfo.status}}</text>
+      </view>
+      <view>
+        <text>会议名称：{{meetingInfo.meetingName}}</text>
+      </view>
+      <view>
+        <text>开始时间：{{meetingInfo.startTime}}</text>
+      </view>
+      <view>
+        <text>结束时间：{{meetingInfo.endTime}}</text>
+      </view>
+      <view>
+        <text>最晚报名时间：{{meetingInfo.applyDeadline}}</text>
+      </view>
+      <view>
+        <text>地址：{{meetingInfo.location}}</text>
+      </view>
+      <view>
+        <text>会议简介：{{meetingInfo.description}}</text>
+      </view>
+    </view>
+
+    <view>
+      <text bindtap='shutdownMeeting'>结束活动</text>
+    </view>
+
+    <view>
+      <text bindtap='showApplys'>查看报名列表</text>
+    </view>
+    <view class='apply-punch' hidden='{{!isShowApplys}}'>
+      <view wx:if="{{meetingApplys.length == 0}}">
+        暂无报名记录
+      </view>
+      <view wx:else>
+        <view wx:for="{{meetingApplys}}" wx:key="unique" wx:for-index="index" wx:for-item="meetingApplys">
+          <image class='logo' src='{{meetingApplys.avatar}}'></image>
+          <text>{{index + 1}}: </text>
+          <text>{{meetingApplys.nickName}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view>
+      <text bindtap='showPunchs'>查看打卡列表</text>
+    </view>
+    <view class='apply-punch' hidden='{{!isShowPunchs}}'>
+      <view wx:if="{{meetingPunchs.length == 0}}">
+        暂无打卡记录
+      </view>
+      <view>
+        <view wx:for="{{meetingPunchs}}" wx:key="unique" wx:for-index="index" wx:for-item="meetingPunchs">
+          <image class='logo' src='{{meetingPunchs.avatar}}'></image>
+          <text>{{index + 1}}: </text>
+          <text>{{meetingPunchs.nickName}}</text>
+          <text>{{meetingPunchs.signTime}}</text>
+        </view>
+      </view>
+    </view>
+
+
+    <button bindtap='{{applyOrPunchStatus.method}}' type='primary' disabled='{{applyOrPunchStatus.disabled}}'>
+      <view>{{applyOrPunchStatus.text}}</view>
+    </button>
+</view>

@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/created/created",
+    "pages/participated/participated",
+    "pages/create/create",
+    "pages/meeting_detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4D4D4D",
+    "navigationBarTitleText": "会议签到",
+    "navigationBarTextStyle": "write",
+    "enablePullDownRefresh": "true"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/participated/participated",
+        "text": "我参加的",
+        "iconPath": "images/participate_out.png",
+        "selectedIconPath": "images/participate_in.png"
+      },
+      {
+        "pagePath": "pages/created/created",
+        "text": "我创建的",
+        "iconPath": "images/my_out.png",
+        "selectedIconPath": "images/my_in.png"
+      },
+      {
+        "pagePath": "pages/create/create",
+        "text": "创建签到",
+        "iconPath": "images/create_out.png",
+        "selectedIconPath": "images/create_in.png"
+      }
+    ],
+    "selectedColor": "#00AAA2"
+  },
+  "debug": false
+}

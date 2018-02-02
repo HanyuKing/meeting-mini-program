@@ -1,0 +1,8 @@
+/* pages/meeting_detail/detail.wxss */
+.apply-punch {
+  margin-left: 20px
+}
+.logo {
+  width: 40px;
+  height: 40px
+}

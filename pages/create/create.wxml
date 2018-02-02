@@ -1,0 +1,41 @@
+<view class='font-size body'>
+
+  <view>
+    <input placeholder="为会议起个名称吧！（1-20个字）" maxlength="20" bindinput='bindMeetingNameInput'/>
+  </view>
+  <view>
+    <textarea placeholder="会议简介" maxlength='300' bindinput='bindMeetingIntroductionInput'/>
+  </view>
+
+  <view>
+    <picker mode="date" value="{{startDate}}" bindchange="bindStartDateChange">
+      <view class="picker">
+        开始日期 {{startDate}}
+      </view>
+    </picker>
+    <picker mode="time" value="{{startTime}}" bindchange="bindStartTimeChange">
+      <view class="picker">
+        开始时间 {{startTime}}
+      </view>
+    </picker>
+
+    <picker mode="date" value="{{endDate}}" bindchange="bindEndDateChange">
+      <view class="picker">
+        结束日期 {{endDate}}
+      </view>
+    </picker>
+    <picker mode="time" value="{{endTime}}" bindchange="bindEndTimeChange">
+      <view class="picker">
+        结束时间 {{endTime}}
+      </view>
+    </picker>
+  </view>
+
+  <view>
+    <input placeholder="会议地址" maxlength="200" bindinput='bindMeetingAddrInput'/>
+  </view>
+  
+  <button type='primary' bindtap='doCreate'>
+    确认创建
+  </button>
+</view>

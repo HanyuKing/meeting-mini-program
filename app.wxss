@@ -1,0 +1,16 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  font-size: 32rpx;
+} 
+
+.font-size {
+  font-size: 32rpx;
+}
+
+ .body {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 20rpx
+} 

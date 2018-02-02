@@ -1,0 +1,73 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.1",
+	"appid": "wxfbb2ff0a45e1bf5f",
+	"projectname": "WHY%E7%AD%BE%E5%88%B0%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%89%8D%E7%AB%AF",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "扫描二维码",
+					"pathName": "pages/index/index",
+					"query": "name=can",
+					"scene": "1011"
+				},
+				{
+					"id": 1,
+					"name": "会议签到-扫描二维码",
+					"pathName": "pages/meeting_detail/detail",
+					"query": "meetingId=1314",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "创建会议页面",
+					"pathName": "pages/create/create",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "已创建的会议",
+					"pathName": "pages/created/created",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "已创建的会议",
+					"pathName": "pages/meeting_detail/detail",
+					"query": "meetingId=7",
+					"scene": "1007"
+				},
+				{
+					"id": -1,
+					"name": "我参加的",
+					"pathName": "pages/participated/participated",
+					"query": ""
+				}
+			]
+		}
+	}
+}
