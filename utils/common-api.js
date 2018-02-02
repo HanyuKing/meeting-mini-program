@@ -1,7 +1,7 @@
 var util = require("util.js")
 
-var host = "http://wx.shop.jd.net";
-var imgHost = "http://img10.360buyimg.com/pop/";
+var host = "https://www.hanyuking.com";
+var imgHost = "https://image.hanyuking.com";
 
 var retryCount = 6; // 重试次数
 var retryTimes = [7, 23, 51, 101, 302];  // 重试时间数, 单位ms
